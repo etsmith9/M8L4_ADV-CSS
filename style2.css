@@ -1,4 +1,4 @@
-/* Task 1: transitional color on A tags */
+/* Task 1: Smooth Hover Transition for Links */
 a {
     transition: color 0.3s ease;
 }
