@@ -1,4 +1,4 @@
-/* Task 1: transitional color on a tags */
+/* Task 1: transitional color on A tags */
 a {
     transition: color 0.3s ease;
 }
@@ -38,18 +38,18 @@ button:active {
     }
 }
 
-/* Task 3: Continuous Rotation for Image/Icon */
+/* Task 3: Continuous Rotation */
 img.rotating {
-    animation: rotate 10s infinite linear; /* Apply rotation animation */
+    animation: rotate 10s infinite linear; 
 }
 
-/* Keyframes for continuous rotation */
+
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
     }
     100% {
-        transform: rotate(360deg); /* Complete a full rotation */
+        transform: rotate(360deg); 
     }
 }
 
