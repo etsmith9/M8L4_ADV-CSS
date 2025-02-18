@@ -1,0 +1,323 @@
+/* Task 1: transitional color on a tags */
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff4500;
+}
+
+/* Task 2: Animated Button on Click */
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:active {
+    animation: clickAnimation 0.3s ease-in-out;
+}
+
+@keyframes clickAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5); 
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Task 3: Continuous Rotation for Image/Icon */
+img.rotating {
+    animation: rotate 10s infinite linear; /* Apply rotation animation */
+}
+
+/* Keyframes for continuous rotation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg); /* Complete a full rotation */
+    }
+}
+
+
+
+
+h1 {
+    background: linear-gradient(to right, #007bff, #6610f2);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* button {
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba (33, 136, 156, 0.8);
+} */
+
+body {
+    font-family: 'arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;  
+    height: 100vh;
+}
+
+header {
+    background-color: #cc92b7;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;  
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+nav, section, article, aside {
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav, .main-content, aside {
+    flex: 1;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;  
+    flex: 3 1 60%;   
+    margin: 10px;
+}
+
+nav {
+    flex: 1 1 200px; 
+    display: block;      
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;   
+}
+
+nav a {
+    color: #9dafff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section, article {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* button {
+    padding: 10px 20 px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+} */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+aside {
+    position: fixed;    
+    right: 20px;
+    top: 20px;
+    width: 200px;
+    background: rgpa(255, 255, 255, 0.9);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+
+blockquote {
+    font-style: italics;
+    color: #555;
+}
+
+img {
+    border-radius:20%;
+}
+
+.navigation-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center; 
+}
+
+.navigation-menu li {
+    display: inline-block; 
+    margin-right: 30px;
+}
+
+.navigation-menu li:last-child {
+    margin-right: 0; 
+}
+
+.navigation-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f0f0f0; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.navigation-menu a:hover {
+    background-color: #ff6600; 
+    color: white;
+    transform: scale(1.1); 
+}
+
+
+@media screen and (max-width: 600px) {    
+	.container {
+		Display: flex;
+		Flex-wrap: wrap;
+		Justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+	}
+
+aside {
+        display: none;
+    }
+}
+
+section, article, aside {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@keyframes pulse {
+    0% {transform: scale(1); }
+    50% {transform: scale(1.1);} 
+    100% {transform: scale(1); }
+}
+
+/* button {
+    animation: pulse 2s infinite;
+} */
+
+nav a:hover {
+    transition: color 0.3s ease;
+    color: #ff4500; /* changes link color smoothly on hover */
+}
+
+img {
+    animation: rotate 10s infinite linear;
+}
+
+/* @keyframes rotate {
+    from {transform: rotate(0deg); }
+    to {transform: rotate(360deg); }
+} */
+/* 
+button {
+    border-radius: 20px; 
+    /* soft, pill-like buttons 
+}
+/* 
+button {
+    background-color: rgba(108, 92, 231, 0.8);
+    /* a deep, semi-transparent purple */
+/* }
+
+button:hover {
+    background-color: rgba(255, 159, 243, 0.8);
+    /* transition to a soft pink */
+    /* box-shadow: 0 0 15px rgba(255, 159, 243, 0.8) */
+    /* add a glowing effect
+} */
+
+/* adding a subtle pulse to the button  */
+/* button {
+    animation: pulse 2s infinite;
+} */ 
+
+@keyframes pulse {
+    0%, 100% {transform: scale(1); }
+    50% {transform: scale(1.05); }
+}
+
+/* thumbnail borders */
+img {
+    border: 5px solid; rgba(255, 255, 255, 0.8);
+    /* a soft, white frame */
+}
+
+/* centering spotlight */
+img {
+    display: block;
+    margin: auto;
+    /* center the image within its container */
+}
+
+/* Transparency and Layering */
+img {
+    opacity: 0.8;
+    /* slightly see-through, adding depth */
+}
+
+img:hover {
+    opacity: 1;
+    /* full opacity on hover, bringing the image to full focus */
+    transition: opacity 0.3s ease;
+}
